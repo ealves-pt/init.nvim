@@ -154,9 +154,15 @@ return packer.startup({
       },
     }
 
+    -- Git
+    use 'tpope/vim-fugitive'                   -- Git integration
+    use {                                      -- Git decorations
+      'lewis6991/gitsigns.nvim',
+      config = [[require('gitsigns').setup()]],
+    }
+
     -- Functionalities
     use 'github/copilot.vim'                   -- GitHub Copilot
-    use 'tpope/vim-fugitive'                   -- Git integration
     use 'tpope/vim-commentary'                 -- Comment functionalities
     use 'tpope/vim-surround'                   -- Surrounding stuff
     use {                                      -- Automatically pair symbols
