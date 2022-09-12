@@ -8,16 +8,14 @@ end
 
 trouble.setup({
   mode = 'document_diagnostics', -- show only document diagnostics (pressing 'm' will toggle between document and workspace)
-  auto_open = true,              -- automatically open the list when you have diagnostics
-  auto_close = true,             -- automatically close the list when you have no diagnostics
   use_diagnostic_signs = true,   -- use the signs defined in your lsp client
 })
 
 local map = require('utils.keymap')
 
-map('n', '<leader>xx', '<cmd>TroubleToggle<cr>')
+map('n', '<leader>xt', '<cmd>TroubleToggle<cr>')
 map('n', '<leader>xw', '<cmd>TroubleToggle lsp_workspace_diagnostics<cr>')
 map('n', '<leader>xd', '<cmd>TroubleToggle lsp_document_diagnostics<cr>')
 map('n', '<leader>xl', '<cmd>TroubleToggle loclist<cr>')
 map('n', '<leader>xq', '<cmd>TroubleToggle quickfix<cr>')
-map('n', 'gR', '<cmd>TroubleToggle lsp_references<cr>')
+-- map('n', 'gR', '<cmd>TroubleToggle lsp_references<cr>')
