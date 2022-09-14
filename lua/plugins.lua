@@ -176,6 +176,12 @@ return packer.startup({
 			run = [[fn['mkdp#util#install']()]],
 		})
 
+		-- Run tests
+		use({
+			"vim-test/vim-test",
+			config = [[require('plugins.vim-test')]],
+		})
+
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if packer_bootstrap then
