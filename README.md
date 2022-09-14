@@ -1,25 +1,20 @@
 # init.nvim
 
-## Dependencies
+## Installation
 
-### luarocks
+1. Clone this repository to ~/.config/nvim
+2. Launch vim and run `:checkhealth` and install the dependencies you need
 
-```bash
-wget https://luarocks.org/releases/luarocks-3.9.1.tar.gz
-tar zxpf luarocks-3.9.1.tar.gz
-cd luarocks-3.9.1
-./configure && make && sudo make install
-sudo luarocks install luasocket
-```
+> The plugin manager and plugins will be installed automatically. You can always
+> run `:PackerSync` to install/clean plugins.
 
 ## Inspiration
 
-- https://github.com/rafi/vim-config
-- https://github.com/elianiva/dotfiles
-- https://github.com/fannheyward/init.vim
-- https://github.com/Blacksuan19/init.nvim
-- https://github.com/mrnugget/vimconfig
-- https://github.com/brainfucksec/neovim-lua
-- https://github.com/numToStr/dotfiles
-- https://github.com/wbthomason/dotfiles
-
+- [https://github.com/rafi/vim-config](rafi/vim-config)
+- [https://github.com/elianiva/dotfiles](elianiva/dotfiles)
+- [https://github.com/fannheyward/init.vim](fannheyward/init.vim)
+- [https://github.com/Blacksuan19/init.nvim](Blacksuan19/init.nvim)
+- [https://github.com/mrnugget/vimconfig](mrnugget/vimconfig)
+- [https://github.com/brainfucksec/neovim-lua](brainfucksec/neovim-lua)
+- [https://github.com/numToStr/dotfiles](numToStr/dotfiles)
+- [https://github.com/wbthomason/dotfiles](wbthomason/dotfiles)
