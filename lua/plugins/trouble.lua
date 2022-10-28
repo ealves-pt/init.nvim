@@ -3,12 +3,12 @@
 
 local trouble_status_ok, trouble = pcall(require, "trouble")
 if not trouble_status_ok then
-	return
+  return
 end
 
 trouble.setup({
-	mode = "document_diagnostics", -- show only document diagnostics (pressing 'm' will toggle between document and workspace)
-	use_diagnostic_signs = true, -- use the signs defined in your lsp client
+  mode = "document_diagnostics", -- show only document diagnostics (pressing 'm' will toggle between document and workspace)
+  use_diagnostic_signs = true, -- use the signs defined in your lsp client
 })
 
 local map = require("utils.keymap")

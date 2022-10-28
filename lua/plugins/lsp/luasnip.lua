@@ -3,18 +3,18 @@ local types = require("luasnip.util.types")
 local luasnip = require("luasnip")
 
 luasnip.setup({
-	ext_opts = {
-		[types.choiceNode] = {
-			active = {
-				virt_text = { { "●", "DiffAdd" } },
-			},
-		},
-		[types.insertNode] = {
-			active = {
-				virt_text = { { "●", "DiffDelete" } },
-			},
-		},
-	},
+  ext_opts = {
+    [types.choiceNode] = {
+      active = {
+        virt_text = { { "●", "DiffAdd" } },
+      },
+    },
+    [types.insertNode] = {
+      active = {
+        virt_text = { { "●", "DiffDelete" } },
+      },
+    },
+  },
 })
 
 -- Loading any vscode snippets from plugins
