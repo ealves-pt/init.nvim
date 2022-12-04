@@ -55,9 +55,8 @@ map("n", "<leader>fg", function()
 end)
 
 -- Find in active buffers
-map("n", "be", "<leader>fb", { remap = true })
 map("n", "<leader>fb", function()
-  builtins.buffers()
+  builtins.buffers({ sort_lastused = true })
 end)
 
 -- Find help tags
