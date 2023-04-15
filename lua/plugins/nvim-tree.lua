@@ -7,7 +7,7 @@ if not status_ok then
 end
 
 local map = require("utils.keymap")
-map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
+map("n", "<C-n>", ":NvimTreeToggle<CR>")       -- open/close
 map("n", "<leader>n", ":NvimTreeFindFile<CR>") -- search file
 
 -- Call setup:
@@ -16,11 +16,10 @@ map("n", "<leader>n", ":NvimTreeFindFile<CR>") -- search file
 nvim_tree.setup({
   hijack_cursor = true,
   update_focused_file = {
-    enable = true, -- focus the current buffer on the tree
+    enable = true,              -- focus the current buffer on the tree
   },
   remove_keymaps = { "<Tab>" }, -- remove keymaps
   view = {
-    hide_root_folder = true, -- prevent root folder from being displayed
     float = {
       enable = true, -- menu will be displayed in a floating window
     },
@@ -29,7 +28,8 @@ nvim_tree.setup({
     ignore = false, -- show git ignored files
   },
   renderer = {
-    add_trailing = true, -- append / to folder names
-    group_empty = true, -- compact folders
+    root_folder_label = false, -- prevent root folder from being displayed
+    add_trailing = true,       -- append / to folder names
+    group_empty = true,        -- compact folders
   },
 })

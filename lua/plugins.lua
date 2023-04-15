@@ -39,10 +39,11 @@ return packer.startup({
     -- common dependency of several plugins
     use("nvim-lua/plenary.nvim")
 
-    -- Nord theme
+    -- Catppuccin theme
     use({
-      "rmehri01/onenord.nvim",
-      config = [[require('plugins.onenord-nvim')]],
+      "catppuccin/nvim",
+      as = "catppuccin",
+      config = [[require('plugins.catppuccin')]],
     })
 
     use({
@@ -94,7 +95,7 @@ return packer.startup({
         config = [[require('plugins.nvim-treesitter')]],
       },
       { "nvim-treesitter/nvim-treesitter-textobjects", after = "nvim-treesitter" },
-      { "nvim-treesitter/nvim-treesitter-refactor", after = "nvim-treesitter" },
+      { "nvim-treesitter/nvim-treesitter-refactor",    after = "nvim-treesitter" },
     })
 
     -- Manage external LSP, DAP, Linters, and Formatters
@@ -118,7 +119,8 @@ return packer.startup({
         config = [[require('plugins.lsp.nvim-lspconfig')]],
         requires = "hrsh7th/cmp-nvim-lsp",
       },
-      { -- nvim-lspconfig progress status
+      {
+        -- nvim-lspconfig progress status
         "j-hui/fidget.nvim",
         config = [[require('fidget').setup()]],
       },
@@ -144,27 +146,29 @@ return packer.startup({
       "hrsh7th/nvim-cmp",
       config = [[require('plugins.lsp.nvim-cmp')]],
       requires = {
-        { "hrsh7th/cmp-buffer", after = "nvim-cmp" },
-        { "hrsh7th/cmp-path", after = "nvim-cmp" },
-        { "hrsh7th/cmp-cmdline", after = "nvim-cmp" },
-        { "hrsh7th/cmp-nvim-lua", after = "nvim-cmp" },
+        { "hrsh7th/cmp-buffer",                  after = "nvim-cmp" },
+        { "hrsh7th/cmp-path",                    after = "nvim-cmp" },
+        { "hrsh7th/cmp-cmdline",                 after = "nvim-cmp" },
+        { "hrsh7th/cmp-nvim-lua",                after = "nvim-cmp" },
         { "hrsh7th/cmp-nvim-lsp-signature-help", after = "nvim-cmp" },
-        { "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" },
+        { "saadparwaiz1/cmp_luasnip",            after = "nvim-cmp" },
       },
     })
 
     -- Git
     use("tpope/vim-fugitive") -- Git integration
-    use({ -- Git decorations
+    use({
+      -- Git decorations
       "lewis6991/gitsigns.nvim",
       config = [[require('gitsigns').setup()]],
     })
 
     -- Functionalities
-    use("github/copilot.vim") -- GitHub Copilot
+    use("github/copilot.vim")   -- GitHub Copilot
     use("tpope/vim-commentary") -- Comment functionalities
-    use("tpope/vim-surround") -- Surrounding stuff
-    use({ -- Automatically pair symbols
+    use("tpope/vim-surround")   -- Surrounding stuff
+    use({
+      -- Automatically pair symbols
       "windwp/nvim-autopairs",
       after = "nvim-cmp",
       config = [[require('plugins.nvim-autopairs')]],

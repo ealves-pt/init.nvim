@@ -3,7 +3,7 @@
 
 require("lualine").setup({
   options = {
-    theme = "onenord",
+    theme = "catppuccin",
   },
   extensions = { "quickfix", "fugitive", "nvim-tree" },
 })
