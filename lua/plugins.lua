@@ -113,6 +113,13 @@ return packer.startup({
       module = "dap",
     })
 
+    -- Golang DAP Config
+    use({
+      "leoluz/nvim-dap-go",
+      requires = "mfussenegger/nvim-dap",
+      config = [[require('dap-go').setup()]],
+    })
+
     -- LSP
     use({
       {
