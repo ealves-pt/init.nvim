@@ -101,6 +101,7 @@ return packer.startup({
     -- Manage external LSP, DAP, Linters, and Formatters
     use({
       "williamboman/mason.nvim",
+      run = ":MasonUpdate",
       config = [[require('plugins.lsp.mason')]],
       requires = "williamboman/mason-lspconfig.nvim",
     })
