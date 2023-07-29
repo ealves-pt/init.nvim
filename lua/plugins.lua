@@ -130,6 +130,7 @@ return packer.startup({
       {
         -- nvim-lspconfig progress status
         "j-hui/fidget.nvim",
+        tag = 'legacy',
         config = [[require('fidget').setup()]],
       },
     })
